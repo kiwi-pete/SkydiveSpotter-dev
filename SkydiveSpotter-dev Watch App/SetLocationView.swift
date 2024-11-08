@@ -15,7 +15,7 @@ struct SetLocationView: View {
             .cornerRadius(10)
             .padding(.top, 50)
             
-            if let location = locationManager.savedLocation {
+            if let location = locationManager.getSavedLocation() {  // Use the getter method here
                 Text("Latitude: \(location.coordinate.latitude)")
                     .padding(.top, 20)
                 Text("Longitude: \(location.coordinate.longitude)")
